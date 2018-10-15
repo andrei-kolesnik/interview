@@ -25,7 +25,7 @@ void print_arr(array<T, SIZE> &arr)
 	//with iterator / distance:
 	for (auto it = arr.begin(); it != arr.end(); ++it)
 		cout << "[" << setw(2) << right << distance(arr.begin(), it) << "]:" << setw(3) << right << *it << endl;
-	
+
 	//with simplified iterator / no distance:
 	//for (auto a : arr)
 	//	cout << setw(3) << right << a << endl;
@@ -33,7 +33,7 @@ void print_arr(array<T, SIZE> &arr)
 }
 //==============================================================================
 template<class T, size_t SIZE>
-void array_merge(array<T, SIZE> &arr1, array<T, 2*SIZE> &arr2)
+void array_merge(array<T, SIZE> &arr1, array<T, 2 * SIZE> &arr2)
 {
 	int n1 = arr1.size(), n2 = arr2.size();
 	for (int i1 = n1 - 1, i2 = n1 - 1, i = n2 - 1; i1 >= 0; i--)
@@ -59,6 +59,7 @@ int main()
 	print_arr<int, 6>(arr2);
 
 	array_merge<int, 3>(arr1, arr2);
+	cout << "Merged:" << endl;
 	print_arr<int, 6>(arr2);
 
 	getchar(); // pause the program
