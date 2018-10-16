@@ -1,8 +1,15 @@
 ﻿using System;
-
+//Find a pair with the given sum in an unsorted array
+//IN:
+//- An unsorted array
+//- A number
+//OUT:
+//- All the element pairs which sum equals to the given number
+//COMMENTS:
+//Sorting solution: complexity O(n^2) (see the solution with sorting & iterators in STL)
 namespace Arrays.NET
 {
-    class Arrays
+    class Arrays_Find_Pair
     {
         static void print_arr(int[] arr)
         {
