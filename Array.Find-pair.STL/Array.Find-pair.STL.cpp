@@ -33,9 +33,9 @@ void array_find_pair(array<T, SIZE> &arr, int sum)
 	{
 		if (*low + *high == sum)
 		{
-			cout << "Pair found at index {" <<
-				distance(arr.begin(), low) << "} and {" <<
-				distance(arr.begin(), high) << "}: (" << *low << " + " << *high << ")" << endl;
+			cout << "Pair found at index [" <<
+				distance(arr.begin(), low) << "] and [" <<
+				distance(arr.begin(), high) << "]: (" << *low << " + " << *high << ")" << endl;
 			low++;
 			high--;
 			found = true;
