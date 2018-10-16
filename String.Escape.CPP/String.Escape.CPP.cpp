@@ -10,15 +10,15 @@
 //ALTERNATIVE: #include <malloc.h>
 using namespace std;
 //==============================================================================
-#define MAX_SIZE 80
+#define MAX_SIZE 40
 char* string_escape_cpp(char* str)
 {
 	//ALTERNATIVE: char *str_esc = (char*)malloc(2*MAX_SIZE+1);
-	static char str_esc[2*MAX_SIZE+1]; //static does not get destroyed after return; double size in case all the characters are "%"
+	static char str_esc[2*MAX_SIZE-1]; //static does not get destroyed after return; double size in case all the characters are "%"
 	int i = 0;
 	for (char *p = str; *p != 0; p++)
 	{ 
-		if (i > 2*MAX_SIZE) break;
+		if (i > 2*MAX_SIZE-1) break;
 		if (*p == '%') str_esc[i++] = *p;
 		str_esc[i++] = *p;
 	}
@@ -32,11 +32,11 @@ int main()
 	char strs[NUM_STRS][MAX_SIZE] = {
 		"", //empty case
 		"Nothing to escape here",
-		"Almost 75% of all American college students have student loan debt",
+		"~75% of all students have loan debt",
 		"5% + 5% = 10%",
 		"set PATH=c:\\;%PATH%",
-		"SELECT * FROM table WHERE comment LIKE '%10%%%'",
-		"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" //extreme case
+		"WHERE comment LIKE '%10%%%'",
+		"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" //extreme case
 	};
 
 	for (int i = 0; i < NUM_STRS; i++)
