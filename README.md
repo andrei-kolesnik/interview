@@ -21,7 +21,9 @@ Merge two sorted arrays.
 * **[C++]** - C-style char[]
 * **[STL]** - Standard Library std::string
 * **[C#]** - C# string/String .NET class
+### [String.Anagram](String.Anagram.STL) [STL]
+Determine if two strings are anagrams (version 1: sorting; version 2: character map).
 ### [String.Escape](String.Escape.CPP) [C++]
-Escape all % characters in a string with % as the escape character
+Escape all % characters in a string with % as the escape character.
 ### [String.Reverse-words](String.Reverse-words.NET) [C#]
 Reverse the words in a string. Include the punctuation as the part of the words (Split and StringBuilder).
