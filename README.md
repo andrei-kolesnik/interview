@@ -1,4 +1,5 @@
 # Data Structures and Algorithms interview questions and their solutions
+Data Structures and Algorithms interview questions and their solutions.
 
 ## Arrays
 * **[C++]** - C-style array
@@ -14,6 +15,12 @@ Find a pair with the given sum in an unsorted array (sorting & iterators).
 Find a missing element in a randomized sequence.
 ### [Array.Sorted-merge](Array.Sorted-merge.STL) [STL]
 Merge two sorted arrays.
+### [Array.Merge-Sort](Array.Merge-sort.CPP) [CPP]
+Sort an array using the merge sort alrorithm.
+* Version 1: straightforward merge
+* Version 2: merge using extra sentinel elements
+* Version 3: merge in place
+* Version 4: library `inplace_merge`
 
 ---
 
