@@ -23,13 +23,13 @@ public:
 	}
 };
 
-void hanoi(int n, HanoiTower &left, HanoiTower &middle, HanoiTower &right)
+void hanoi(int n, HanoiTower &from, HanoiTower &through, HanoiTower &to)
 {
 	if (n == 0) return;
-	hanoi(n - 1, left, right, middle);
-	right.Put(left.Get());
-	cout << left.name << "->" << right.name << endl;
-	hanoi(n - 1, middle, left, right);
+	hanoi(n - 1, from, to, through);
+	to.Put(from.Get());
+	cout << from.name << "->" << to.name << endl;
+	hanoi(n - 1, through, from, to);
 }
 
 int main() {
