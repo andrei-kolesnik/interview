@@ -36,5 +36,5 @@ Reverse the words in a string. Include the punctuation as the part of the words 
 ---
 
 ## Algorithms
-### [Hanoi](Algorithms.Hanoi.STL) [STL]
+### [Algorithm.Hanoi](Algorithm.Hanoi.STL) [STL]
 Solve the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) puzzle.
