@@ -38,3 +38,8 @@ Reverse the words in a string. Include the punctuation as the part of the words 
 ## Algorithms
 ### [Algorithm.Hanoi](Algorithm.Hanoi.STL) [STL]
 Solve the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) puzzle.
+
+### [Algorithm.Counting-1-bits](Algorithm.Counting-1-bits.STL) [STL]
+Count the number of 1-bits in the binary representation of a positive number 
+* Version 1: straightforward bitwise shift
+* Version 2: [Brian Kernighan’s Algorithm](https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetKernighan)
