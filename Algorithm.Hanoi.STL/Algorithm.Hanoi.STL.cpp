@@ -7,7 +7,11 @@ private:
 	stack<int> tower;
 public:
 	string name;
-	HanoiTower(string _name) : name(_name) {}
+	int disks;
+	HanoiTower(string _name, int _disks = 0) : name(_name), disks(_disks) {
+		for (int i = disks; i > 0; i--)
+			Put(i);
+	}
 	int Get() {
 		int result = tower.top();
 		tower.pop();
@@ -33,11 +37,8 @@ void hanoi(int n, HanoiTower &from, HanoiTower &through, HanoiTower &to)
 }
 
 int main() {
-	HanoiTower left("left"), middle("middle"), right("right");
-	int n = 6;
-	for (int i = n; i > 0; i--)
-		left.Put(i);
-	hanoi(n, left, middle, right);
+	HanoiTower left("left", 6), middle("middle"), right("right");
+	hanoi(left.disks, left, middle, right);
 	right.Print();
 	system("pause");
 	return 0;
