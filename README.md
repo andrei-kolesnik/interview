@@ -32,6 +32,8 @@ Determine if two strings are anagrams (version 1: sorting; version 2: character 
 Escape all % characters in a string with % as the escape character.
 ### [String.Reverse-words](String.Reverse-words.NET) [C#]
 Reverse the words in a string. Include the punctuation as the part of the words (Split and StringBuilder).
+### [String.Anagram](String.Non-repeated-character.STL) [STL]
+Find the first non-repeated character in a string (version 1: two stacks; version 2: character map).
 
 ---
 
