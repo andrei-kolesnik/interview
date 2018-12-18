@@ -45,9 +45,12 @@ Find the first non-repeated character in a string (version 1: two stacks; versio
 Solve the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) puzzle.
 
 ### [Algorithm.Counting-1-bits](Algorithm.Counting-1-bits.STL) [STL]
-Count the number of 1-bits in the binary representation of a positive number 
+Count the number of 1-bits in the binary representation of a positive number.
 * Version 1: straightforward bitwise shift
 * Version 2: [Brian Kernighan’s Algorithm](https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetKernighan)
 
 ### [Algorithm.Sieve-of-Eratosthenes](Algorithm.Sieve-of-Eratosthenes.STL) [STL]
-Find all the prime numbers up to a given limit using [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) algorithm
+Find all the prime numbers up to a given limit using [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) algorithm.
+
+### [Algorithm.Postfix-notation](Algorithm.Postfix-notation.STL) [STL]
+Parse and calculate an arithmetic expression in [Reverse Polish / postfix notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation).
