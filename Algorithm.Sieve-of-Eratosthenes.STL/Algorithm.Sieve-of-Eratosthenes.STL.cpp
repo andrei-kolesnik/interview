@@ -15,7 +15,8 @@ void SieveOfEratosthenes(int n)
 		cout << "<None>" << endl;
 		return;
 	}
-	vector<bool> Numb3rs(n, true); // could have used bitset, but it needs to know the size at the compile time
+	vector<bool> Numb3rs(n+1, true); // could have used bitset, but it needs to know the size at the compile time
+	Numb3rs[0] = Numb3rs[1] = false; // just in case
 	for (int i = 2; i <= sqrt(n); i++)
 		if (Numb3rs[i])
 			for (int j = i * i; j <= n; j += i)
