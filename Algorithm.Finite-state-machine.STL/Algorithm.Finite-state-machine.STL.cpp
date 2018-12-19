@@ -90,7 +90,7 @@ __int64 addFSM(__int32 a, __int32 b)
 void check(__int32 a, __int32 b, __int64 expected) {
 	__int64 actual = addFSM(a, b);
 	cout << boolalpha;
-	cout << (actual == a + b && actual == expected? "PASS" : "FAIL") << " " << setbase(2)
+	cout << (actual == a + b && actual == expected ? "PASS" : "FAIL") << " "
 		<< " ( " << expected << " / " << actual << ")" << endl;
 }
 
