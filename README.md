@@ -1,7 +1,7 @@
 # Data Structures and Algorithms interview questions and their solutions
 Data Structures and Algorithms interview questions and their solutions.
 
-(Problems from [LeetCode](https://github.com/andrei-kolesnik/leetcode) and [HackerRank](https://github.com/andrei-kolesnik/hackerrank) can be found in their respected repositories.)
+(Problems from [LeetCode](https://github.com/andrei-kolesnik/leetcode) and [HackerRank](https://github.com/andrei-kolesnik/hackerrank) can be found in their respective repositories.)
 
 * **[C++]** - C-style array
 * **[STL]** - Standard Library std::array
