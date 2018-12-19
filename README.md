@@ -1,5 +1,6 @@
 # Data Structures and Algorithms interview questions and their solutions
 Data Structures and Algorithms interview questions and their solutions.
+(Problems from [LeetCode](https://github.com/andrei-kolesnik/leetcode) and [HackerRank](https://github.com/andrei-kolesnik/hackerrank) can be found in their respected repositories.)
 
 * **[C++]** - C-style array
 * **[STL]** - Standard Library std::array
@@ -54,3 +55,7 @@ Find all the prime numbers up to a given limit using [Sieve of Eratosthenes](htt
 
 ### [Algorithm.Postfix-notation](Algorithm.Postfix-notation.STL) [STL]
 Parse and calculate an arithmetic expression in [Reverse Polish / postfix notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation).
+
+### [Algorithm.Finite-state-machine](Algorithm.Finite-state-machine.STL) [STL]
+Implement binary addition using [Finite-state-machine](https://en.wikipedia.org/wiki/Finite-state_machine).
+
