@@ -11,7 +11,7 @@ Data Structures and Algorithms interview questions and their solutions.
 
 ### [Array.Binary-search](Array.Binary-search.CPP) [C++]
 Implement a binary search for the integer in a sorted array.
-### Array.Find-pair [brute force version, C#](Array.Find-pair.NET) [sorting & iterators, STL](Array.Find-pair.STL)
+### Array.Find-pair [[brute force version, C#]](Array.Find-pair.NET) [[sorting & iterators, STL]](Array.Find-pair.STL)
 Find a pair with the given sum in an unsorted array ().
 ### [Array.Merge-Sort](Array.Merge-sort.CPP) [CPP]
 Sort an array using the merge sort alrorithm.
