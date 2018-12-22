@@ -11,8 +11,10 @@ Data Structures and Algorithms interview questions and their solutions.
 
 ### [Array.Binary-search](Array.Binary-search.CPP) [C++]
 Implement a binary search for the integer in a sorted array.
+
 ### Array.Find-pair [[brute force version, C#]](Array.Find-pair.NET) [[sorting & iterators, STL]](Array.Find-pair.STL)
-Find a pair with the given sum in an unsorted array ().
+Find a pair with the given sum in an unsorted array.
+
 ### [Array.Merge-Sort](Array.Merge-sort.CPP) [CPP]
 Sort an array using the merge sort alrorithm.
 * Version 1: straightforward merge
@@ -22,6 +24,7 @@ Sort an array using the merge sort alrorithm.
 
 ### [Array.Missing-element](Array.Missing-element.CPP) [C++]
 Find a missing element in a randomized sequence.
+
 ### [Array.Sorted-merge](Array.Sorted-merge.STL) [STL]
 Merge two sorted arrays.
 
@@ -31,10 +34,13 @@ Merge two sorted arrays.
 
 ### [String.Anagram](String.Anagram.STL) [STL]
 Determine if two strings are anagrams (version 1: sorting; version 2: character map).
+
 ### [String.Escape](String.Escape.CPP) [C++]
 Escape all % characters in a string with % as the escape character.
+
 ### [String.Non-repeated-character](String.Non-repeated-character.STL) [STL]
 Find the first non-repeated character in a string (version 1: two stacks; version 2: character map).
+
 ### [String.Reverse-words](String.Reverse-words.NET) [C#]
 Reverse the words in a string. Include the punctuation as the part of the words (Split and StringBuilder).
 
@@ -49,6 +55,12 @@ Count the number of 1-bits in the binary representation of a positive number.
 
 ### [Algorithm.Finite-state-machine](Algorithm.Finite-state-machine.STL) [STL]
 Implement binary addition using [Finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine).
+
+### [Algorithm.Greatest-common-divisor](Algorithm.Greatest-common-divisor.CPP) [C++]
+Find the greatest common divisor of the two given numbers using the [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm).
+* Version 1: division-based
+* Version 2: subtraction-based
+* Version 3: recursion-based
 
 ### [Algorithm.Hanoi](Algorithm.Hanoi.STL) [STL]
 Solve the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) puzzle.
