@@ -56,6 +56,9 @@ Count the number of 1-bits in the binary representation of a positive number.
 ### [Algorithm.Finite-state-machine](Algorithm.Finite-state-machine.STL) [STL]
 Implement binary addition using [Finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine).
 
+### [Algorithm.Huffman-codes](Algorithm.Huffman-codes.STL) [STL]
+Implement [Huffman coding](https://en.wikipedia.org/wiki/Huffman_coding).
+
 ### [Algorithm.Greatest-common-divisor](Algorithm.Greatest-common-divisor.CPP) [C++]
 Find the greatest common divisor of the two given numbers using the [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm).
 * Version 1: division-based
