@@ -68,6 +68,11 @@ Find the greatest common divisor of the two given numbers using the [Euclidean a
 ### [Algorithm.Hanoi](Algorithm.Hanoi.STL) [STL]
 Solve the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) puzzle.
 
+### [Algorithm.Inversion-number](Algorithm.Inversion-number.STL) [STL]
+Count the [Inversion number](https://en.wikipedia.org/wiki/Inversion_%28discrete_mathematics%29) in an array.
+* Version 1: Straightforward
+* Version 2: Using merge-sort
+
 ### [Algorithm.Postfix-notation](Algorithm.Postfix-notation.STL) [STL]
 Parse and calculate an arithmetic expression in [Reverse Polish / postfix notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation).
 
