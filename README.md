@@ -85,3 +85,9 @@ Parse and calculate an arithmetic expression in [Reverse Polish / postfix notati
 
 ### [Algorithm.Sieve-of-Eratosthenes](Algorithm.Sieve-of-Eratosthenes.STL) [STL]
 Find all the prime numbers up to a given limit using [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) algorithm.
+
+### [Algorithm.Two-odd-numbered-elements](Algorithm.Two-odd-numbered-elements.CPP) [CPP]
+You are given an integer array, where all numbers except for TWO numbers appear even number of times. 
+Find out the two numbers which appear odd number of times.
+* Version 1: bit manipulation
+* Version 2: using a hash table - is trivial and is not implemented
