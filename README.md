@@ -25,6 +25,14 @@ Sort an array using the merge sort alrorithm.
 ### [Array.Missing-element](Array.Missing-element.CPP) [C++]
 Find a missing element in a randomized sequence.
 
+### [Array.Duplicated-element](Array.Duplicated-element.CPP) [C++]
+Given an array of n + 1 integers between 1 and n, find one of the duplicates.
+* Version 1: brute force
+* Version 2: using a map/counters
+* Version 3: using the sum of the elemets
+* Version 4: using +/- markers
+* Version 5: looking for a loop
+
 ### [Array.Sorted-merge](Array.Sorted-merge.STL) [STL]
 Merge two sorted arrays.
 
@@ -71,7 +79,6 @@ Solve the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) puzzle.
 ### [Algorithm.Inversion-number](Algorithm.Inversion-number.STL) [STL]
 Count the [Inversion number](https://en.wikipedia.org/wiki/Inversion_%28discrete_mathematics%29) in an array.
 * Version 1: Straightforward
-* Version 2: Using merge-sort
 
 ### [Algorithm.Postfix-notation](Algorithm.Postfix-notation.STL) [STL]
 Parse and calculate an arithmetic expression in [Reverse Polish / postfix notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation).
