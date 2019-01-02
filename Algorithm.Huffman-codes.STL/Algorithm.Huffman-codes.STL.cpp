@@ -21,7 +21,6 @@ class HuffmanCodes {
 private:
 	priority_queue<HeapNode*, vector<HeapNode*>, compareHeapNodes> heap;
 	map<char, string> codes;
-	const char stop = '*';
 	void makeCodes(HeapNode* root, string s) {
 		if (!root) return;
 		if (root->character != stop)
@@ -30,6 +29,7 @@ private:
 		makeCodes(root->right, s + "1");
 	}
 public:
+	const char stop = '*';
 	string encode(string s) {
 		if (s.size() < 1) return "";
 		map<char, int> counter;
@@ -43,9 +43,32 @@ public:
 		}
 		makeCodes(heap.top(), "");
 		stringstream ss;
-		for (auto ch : s) ss << codes[ch] << " ";
+		for (auto ch : s) ss << codes[ch] ; //<< " "
 		return ss.str();
 	}
+
+	string decode(string s) {
+		stringstream ss;
+		HeapNode *p = heap.top();
+		int i = 0;
+		while (p && i < s.size())
+			if (p->character != stop)
+			{
+				ss << p->character;
+				p = heap.top();
+			}
+			else
+			{
+				if (s[i] == '0')
+					p = p->left;
+				else
+					p = p->right;
+				i++;
+			}
+		ss << p->character;
+		return ss.str();
+	}
+
 	void printCodes() {
 		cout << endl << "Codes:" << endl;
 		for (auto code : codes)
@@ -56,7 +79,13 @@ public:
 int main()
 {
 	HuffmanCodes hc;
-	cout << hc.encode("huffman coding is a lossless data compression algorithm") << endl;
+	string original = "huffman coding is a lossless data compression algorithm";
+	cout << "ORIGINAL: " << original << endl;
+	string encoded = hc.encode(original);
+	cout << "ENCODED: " << encoded << endl;
+	string decoded = hc.decode(encoded);
+	cout << "DECODED: " << decoded << endl;
+	cout << (decoded == original ? "PASS" : "FAIL") << endl;
 	hc.printCodes();
 	system("pause");
 	return 0;
