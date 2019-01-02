@@ -49,6 +49,9 @@ Escape all % characters in a string with % as the escape character.
 ### [String.Non-repeated-character](String.Non-repeated-character.STL) [STL]
 Find the first non-repeated character in a string (version 1: two stacks; version 2: character map).
 
+### [String.Non-repeated-substring](String.Non-repeated-substring.STL) [STL]
+Given a string, find the max size of the sub-string which has no duplicate characters.
+
 ### [String.Reverse-words](String.Reverse-words.NET) [C#]
 Reverse the words in a string. Include the punctuation as the part of the words (Split and StringBuilder).
 
