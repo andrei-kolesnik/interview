@@ -12,8 +12,10 @@ Data Structures and Algorithms interview questions and their solutions.
 ### [Array.Binary-search](Array.Binary-search.CPP) [C++]
 Implement a binary search for the integer in a sorted array.
 
-### Array.Find-pair [[brute force version, C#]](Array.Find-pair.NET) [[sorting & iterators, STL]](Array.Find-pair.STL)
+### Array.Find-pair 
 Find a pair with the given sum in an unsorted array.
+* Version 1: brute force [[C#]](Array.Find-pair.NET) 
+* Version 2: sorting & iterators [[STL]](Array.Find-pair.STL)
 
 ### [Array.Merge-Sort](Array.Merge-sort.CPP) [CPP]
 Sort an array using the merge sort alrorithm.
@@ -21,6 +23,9 @@ Sort an array using the merge sort alrorithm.
 * Version 2: merge using extra sentinel elements
 * Version 3: merge in place
 * Version 4: library `inplace_merge`
+
+### [Array.Quick-Sort](Array.Quick-sort.CPP) [CPP]
+Sort an array using the merge sort alrorithm.
 
 ### [Array.Missing-element](Array.Missing-element.CPP) [C++]
 Find a missing element in a randomized sequence.
@@ -41,19 +46,27 @@ Merge two sorted arrays.
 ## Strings
 
 ### [String.Anagram](String.Anagram.STL) [STL]
-Determine if two strings are anagrams (version 1: sorting; version 2: character map).
+Determine if two strings are anagrams 
+* Version 1: sorting
+* Version 2: character map
 
 ### [String.Escape](String.Escape.CPP) [C++]
 Escape all % characters in a string with % as the escape character.
 
 ### [String.Non-repeated-character](String.Non-repeated-character.STL) [STL]
-Find the first non-repeated character in a string (version 1: two stacks; version 2: character map).
+Find the first non-repeated character in a string 
+* Version 1: two stacks
+* Version 2: character map
 
 ### [String.Non-repeated-substring](String.Non-repeated-substring.STL) [STL]
 Given a string, find the max size of the sub-string which has no duplicate characters.
+* character map
+* two pointers
 
 ### [String.Reverse-words](String.Reverse-words.NET) [C#]
-Reverse the words in a string. Include the punctuation as the part of the words (Split and StringBuilder).
+Reverse the words in a string. Include the punctuation as the part of the words.
+* split
+* StringBuilder
 
 ---
 
