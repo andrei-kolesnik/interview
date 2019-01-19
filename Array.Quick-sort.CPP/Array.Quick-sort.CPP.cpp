@@ -29,7 +29,7 @@ int partition_array(int arr[], int left, int right)
 {
 	int pivot = arr[right];
 	int pos = left;
-	for (size_t i = left; i <= right - 1; i++)
+	for (size_t i = left; i < right; i++)
 		if (arr[i] < pivot)
 		{
 			swap(&arr[i], &arr[pos]);
@@ -43,9 +43,9 @@ void quick_sort_array(int arr[], int left, int right)
 {
 	if (left < right)
 	{
-		int pos = partition_array(arr, left, right);
-		quick_sort_array(arr, left, pos - 1);
-		quick_sort_array(arr, pos + 1, right);
+		int pos = partition_array(arr, left, right); // the element at [pos] is already at its place
+		quick_sort_array(arr, left, pos - 1); // everything on the left of [pos] is smaller, we can quick sort it
+		quick_sort_array(arr, pos + 1, right); // everything on the right of [pos] is bigger, we can quick sort it as well
 	}
 }
 
