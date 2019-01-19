@@ -34,7 +34,7 @@ Sort an array using the merge sort alrorithm.
 ### Merge Sorted [[C++ STL]](Array.Sorted-merge.STL)
 Merge two sorted arrays.
 
-### Quick Sort [[C++]](Array.Quick-sort.CPP)
+### Quick Sort [[C++]](Array.Quick-sort.CPP) [[PHP]](PHP/)
 Sort an array using the quick sort alrorithm.
 
 
