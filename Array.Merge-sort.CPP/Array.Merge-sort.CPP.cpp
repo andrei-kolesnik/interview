@@ -82,11 +82,12 @@ void merge_array_in_place(int arr[], int first, int middle, int last)
 		return;
 	while (left <= middle && right <= last)
 	{
-		if (arr[left] <= arr[right]) left++; //selecting from left, no swap, just advance left
+		if (arr[left] <= arr[right]) //selecting from left: no swap, just advance left
+			left++; 
 		else //selecting from right: rotate one step to the right
 		{
 			int tmp = arr[right];
-			for (int i = right; i >= left; i--)
+			for (int i = right; i > left; i--)
 				arr[i] = arr[i - 1];
 			arr[left] = tmp;
 			left++; middle++; right++; //move everything by one step
@@ -103,9 +104,9 @@ void merge_sort_array(int arr[], int left, int right)
 		int middle = (left + right) / 2;
 		merge_sort_array(arr, left, middle);
 		merge_sort_array(arr, middle+1, right);
-		merge_array(arr, left, middle, right); //version 1
+//		merge_array(arr, left, middle, right); //version 1
 //		merge_array_sentinel(arr, left, middle, right); //version 2
-//		merge_array_in_place(arr, left, middle, right); //version 3
+		merge_array_in_place(arr, left, middle, right); //version 3
 //		inplace_merge(arr + left, arr + middle + 1, arr + right + 1); //version 4: there is actually the function for this already in std::algorithm
 	}
 }
