@@ -42,7 +42,7 @@ Sort an array using the quick sort alrorithm.
 
 ## Strings
 
-### Anagram [[C++ STL]](String.Anagram.STL)
+### Anagram [[C++ STL]](String.Anagram.STL) [[PHP]](PHP/String.Anagram.PHP)
 Determine if two strings are anagrams 
 * Version 1: sorting
 * Version 2: character map
