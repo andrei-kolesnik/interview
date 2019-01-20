@@ -24,7 +24,7 @@ Given an array of n + 1 integers between 1 and n, find one of the duplicates.
 * Version 4: using +/- markers
 * Version 5: looking for a loop
 
-### Merge Sort [[C++]](Array.Merge-sort.CPP)
+### Merge Sort [[C++]](Array.Merge-sort.CPP) [[PHP]](PHP/Array.Merge-sort.PHP)
 Sort an array using the merge sort alrorithm.
 * Version 1: straightforward merge
 * Version 2: merge using extra sentinel elements
