@@ -47,7 +47,7 @@ Determine if two strings are anagrams
 * Version 1: sorting
 * Version 2: character map
 
-### Escaping [[C++]](String.Escape.CPP)
+### Escaping [[C++]](String.Escape.CPP) [[PHP]](PHP/String.Escape.PHP)
 Escape all % characters in a string with % as the escape character.
 
 ### Non-repeated Character [[C++ STL]](String.Non-repeated-character.STL)
