@@ -60,7 +60,7 @@ Given a string, find the max size of the sub-string which has no duplicate chara
 * character map
 * two pointers
 
-### Reverse Words [[C#]](String.Reverse-words.NET)
+### Reverse Words [[C#]](String.Reverse-words.NET) [[PHP]](PHP/String.Reverse-words.PHP)
 Reverse the words in a string. Include the punctuation as the part of the words.
 * split
 * StringBuilder

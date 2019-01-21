@@ -1,8 +1,10 @@
-﻿//Reverse the words in a string. Include the punctuation as the part of the words.
-//IN: 
-//A string
-//OUT:
-//The string with the words in the reversed order
+﻿/*
+Reverse the words in a string. Include the punctuation as the part of the words.
+IN: 
+A string
+OUT:
+The string with the words in the reversed order
+*/
 using System;
 using System.Text;
 
