@@ -69,7 +69,7 @@ Reverse the words in a string. Include the punctuation as the part of the words.
 
 ## Algorithms
 
-### Counting 1-bits [[C++ STL]](Algorithm.Counting-1-bits.STL)
+### Counting 1-bits [[C++ STL]](Algorithm.Counting-1-bits.STL) [[PHP]](PHP/Algorithm.Counting-1-bits.PHP)
 Count the number of 1-bits in the binary representation of a positive number.
 * Version 1: straightforward bitwise shift
 * Version 2: [Brian Kernighan’s Algorithm](https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetKernighan)

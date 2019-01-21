@@ -1,7 +1,10 @@
+/*
+Count the number of 1-bits in the binary representation of a positive number.
+*/
 #include <bits/stdc++.h>
 
 using namespace std;
-
+// Version 1: simple count
 int countOneBitsSimple(int val)
 {
 	int result = 0;
@@ -12,7 +15,7 @@ int countOneBitsSimple(int val)
 	} 
 	return result;
 }
-
+// Version 2: Brian Kernighan’s Algorithm (https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetKernighan)
 int countOneBitsKernighan(int val)
 {
 	int result = 0;
