@@ -4,7 +4,7 @@ Find the first non-repeated character in a string
 #include <bits/stdc++.h>
 using namespace std;
 //==============================================================================
-//VERSION 1: using two stacks
+//VERSION 1: using two arrays
 char getFirstNonRepeatedChar1(string s)
 {
 	vector<char> repeated;
@@ -26,7 +26,7 @@ char getFirstNonRepeatedChar1(string s)
 	else return ' ';
 }
 //==============================================================================
-//VERSION 2a: using character map/count
+//VERSION 2: using character map/count
 char getFirstNonRepeatedChar2(string s)
 {
 	map<char, int> M;

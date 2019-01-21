@@ -2,8 +2,8 @@
 /*
 Find the first non-repeated character in a string
 */
-
-function getFirstNonRepeatedChar($str) {
+//VERSION 1: using two arrays
+function getFirstNonRepeatedCharArray($str) {
     if (strlen($str) == 0) //str_split of an empty string will have one element in the return array, unfortunately
         return ' ';
     $repeated = array();
@@ -28,13 +28,24 @@ function getFirstNonRepeatedChar($str) {
     else
         return ' ';
 }
+//VERSION 2: using character map/count
+function getFirstNonRepeatedCharMap($str) {
+    if (strlen($str) == 0) 
+        return ' ';
+    $map = count_chars($str);
+    foreach (str_split($str) as $ch) 
+        if ($map[ord($ch)] == 1)
+            return $ch;
+    return ' ';
+}
 
 function check($str, $expected) {
-    $actual = getFirstNonRepeatedChar($str);
+    $actual1 = getFirstNonRepeatedCharArray($str);
+    $actual2 = getFirstNonRepeatedCharMap($str);
     echo 
         $str, ': ', 
-        ($actual == $expected) ? "PASS" : "FAIL", 
-        " ($actual/$expected)\n";
+        ($actual1 == $expected && $actual2 == $expected) ? "PASS" : "FAIL", 
+        " ($actual1/$actual2/$expected)\n";
 }
 
 check('abcdeacdef', 'b');
