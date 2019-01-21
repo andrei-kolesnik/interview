@@ -1,8 +1,10 @@
-//Implement a binary search for the integer in a sorted array
-//IN:
-//A sorted array, the element to search for
-//OUT: 
-//The position of the element in the array, or -1 if not found
+/*
+Implement a binary search for the integer in a sorted array
+IN:
+A sorted array, the element to search for
+OUT: 
+The position of the element in the array, or -1 if not found
+*/
 //==============================================================================
 #include <iostream>
 #include <iomanip>

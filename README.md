@@ -5,7 +5,7 @@ Data Structures and Algorithms interview questions and their solutions.
 
 ## Arrays
 
-### Binary Search [[C++]](Array.Binary-search.CPP)
+### Binary Search [[C++]](Array.Binary-search.CPP) [[PHP]](PHP/Array.Binary-search.PHP)
 Implement a binary search for the integer in a sorted array.
 
 ### Find a Pair 
