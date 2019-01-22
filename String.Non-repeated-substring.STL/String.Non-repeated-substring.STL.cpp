@@ -4,9 +4,8 @@ Given a string, find the max size of the sub-string which has no duplicate chara
 #include <bits/stdc++.h>
 using namespace std;
 //==============================================================================
-int getNonRepeatedSubstring(string s){
-	int result = 0;
-	int left = 0, right = 0;
+int getNonRepeatedSubstring(string s) {
+	int result = 0, left = 0, right = 0;
 	map<char, bool> counter;
 	while (left < s.size())
 	{
@@ -14,9 +13,9 @@ int getNonRepeatedSubstring(string s){
 		if (counter.find(c) == counter.end())
 		{
 			counter[c] = true;
-			if (right >= s.size())
+			if (right + 1 >= s.size())
 			{
-				result = max(result, right - left);
+				result = max(result, right + 1 - left);
 				break;
 			}
 			right++;

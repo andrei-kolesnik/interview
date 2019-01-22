@@ -55,7 +55,7 @@ Find the first non-repeated character in a string
 * Version 1: two stacks
 * Version 2: character map
 
-### Non-repeated Substring [[C++ STL]](String.Non-repeated-substring.STL)
+### Non-repeated Substring [[C++ STL]](String.Non-repeated-substring.STL) [[PHP]](PHP/String.Non-repeated-substring.PHP)
 Given a string, find the max size of the sub-string which has no duplicate characters.
 * character map
 * two pointers
