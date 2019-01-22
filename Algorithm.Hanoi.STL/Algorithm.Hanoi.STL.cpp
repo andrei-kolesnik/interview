@@ -1,3 +1,6 @@
+/*
+Solve the Tower of Hanoi puzzle.
+*/
 #include <bits/stdc++.h>
 
 using namespace std;

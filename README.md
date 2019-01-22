@@ -96,7 +96,7 @@ Parse and calculate an arithmetic expression in [Reverse Polish / postfix notati
 ### Sieve of Eratosthenes [[C++ STL]](Algorithm.Sieve-of-Eratosthenes.STL)
 Find all the prime numbers up to a given limit using [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) algorithm.
 
-### Tower of Hanoi [[C++ STL]](Algorithm.Hanoi.STL) 
+### Tower of Hanoi [[C++ STL]](Algorithm.Hanoi.STL) [[PHP]](PHP/Algorithm.Hanoi.PHP) 
 Solve the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) puzzle.
 
 ### Two Odd Numbered Elements [[C++]](Algorithm.Two-odd-numbered-elements.CPP)
