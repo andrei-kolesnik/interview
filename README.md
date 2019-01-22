@@ -11,7 +11,7 @@ Implement a binary search for the integer in a sorted array.
 ### Find a Pair 
 Find a pair with the given sum in an unsorted array.
 * Version 1: brute force [[C#]](Array.Find-pair.NET) 
-* Version 2: sorting & iterators [[C++ STL]](Array.Find-pair.STL)
+* Version 2: sorting & two pointers [[C++ STL]](Array.Find-pair.STL) [[PHP]](PHP/Array.Find-pair.PHP)
 
 ### Missing Element [[C++]](Array.Missing-element.CPP)
 Find a missing element in a randomized sequence.

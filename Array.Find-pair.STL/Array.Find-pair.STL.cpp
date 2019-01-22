@@ -1,11 +1,13 @@
-//Find a pair with the given sum in an unsorted array
-//IN:
-//- An unsorted array
-//- A number
-//OUT:
-//- All the element pairs which sum equals to the given number
-//COMMENTS:
-//Sorting solution: complexity O(n*log(n)) / space O(1) (see the brute force solution in C#)
+/*
+Find a pair with the given sum in an unsorted array
+IN:
+- An unsorted array
+- A number
+OUT:
+- All the element pairs which sum equals to the given number
+COMMENTS:
+Sorting solution: complexity O(n*log(n)) / space O(1) (see the brute force solution in C#)
+*/
 #include <iostream>
 #include <iomanip>
 #include <array>
