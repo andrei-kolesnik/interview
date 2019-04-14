@@ -13,7 +13,6 @@ function rowsToColumns($arr)
         return array();
     else if (count($arr) == 1)
         return array_chunk($arr[0], 1);
-
     // https://www.php.net/manual/en/function.array-map.php
     // An interesting use of array_map is to construct an array of arrays,
     // which can be easily performed by using NULL as the name of the callback function
