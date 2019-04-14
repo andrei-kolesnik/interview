@@ -1,6 +1,6 @@
 <?php
 /*
-Given an array, sort it using the merge sort alrorithm
+Given an array, sort it using the merge sort algorithm
 IN:
 Unsorted array with n elements
 Out:
