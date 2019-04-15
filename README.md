@@ -25,7 +25,7 @@ Given an array of n + 1 integers between 1 and n, find one of the duplicates.
 * Version 5: looking for a loop
 
 ### Merge Sort [[C++]](Array.Merge-sort.CPP) [[PHP]](PHP/Array.Merge-sort.PHP)
-Sort an array using the merge sort alrorithm.
+Sort an array using the merge sort algorithm.
 * Version 1: straightforward merge
 * Version 2: merge using extra sentinel elements
 * Version 3: merge in place
@@ -35,10 +35,10 @@ Sort an array using the merge sort alrorithm.
 Merge two sorted arrays.
 
 ### Quick Sort [[C++]](Array.Quick-sort.CPP) [[PHP]](PHP/Array.Quick-sort.PHP)
-Sort an array using the quick sort alrorithm.
+Sort an array using the quick sort algorithm.
 
 ### Bead Sort [[PHP]](PHP/Array.Bead-sort.PHP)
-Sort an array using the bead sort alrorithm.
+Sort an array using the bead sort algorithm.
 
 
 ---
