@@ -96,10 +96,10 @@ SELECT
 	DISTINCT w1.DayNo
 FROM
 	DailyWeather w1,
-    DailyWeather w2
+	DailyWeather w2
 WHERE
 	w1.Temperature = w2.Temperature AND
-    abs(w1.DayNo - w2.DayNo) = 1
+	abs(w1.DayNo - w2.DayNo) = 1
 ORDER BY 
 	w1.DayNo;
 ```
@@ -120,13 +120,13 @@ ORDER BY
 SELECT 
 	w1.DayNo AS 'Start', 
 	w2.DayNo AS 'Finish', 
-    w1.Temperature
+	w1.Temperature
 FROM 
 	DailyWeather w1,
 	DailyWeather w2
 WHERE 
 	w1.DayNo = w2.DayNo - 1 AND
-    w1.Temperature = w2.Temperature
+	w1.Temperature = w2.Temperature
 ORDER BY w1.DayNo;
 ```
 | Start | Finish | Temperature |
@@ -141,25 +141,25 @@ ORDER BY w1.DayNo;
 SELECT 
 	w1.DayNo AS 'Start', 
 	w2.DayNo AS 'Finish', 
-    w2.DayNo - w1.DayNo + 1 as 'Size',
-    w1.Temperature
+	w2.DayNo - w1.DayNo + 1 as 'Size',
+	w1.Temperature
 FROM 
 	DailyWeather w1,
 	DailyWeather w2
 WHERE 
 	w1.DayNo < w2.DayNo AND
-    w1.Temperature = w2.Temperature AND
-    NOT EXISTS (
+	w1.Temperature = w2.Temperature AND
+	NOT EXISTS (
 		SELECT 1 
-        FROM DailyWeather w3
-        WHERE
+		FROM DailyWeather w3
+		WHERE
 			(w3.Temperature != w1.Temperature AND w3.DayNo BETWEEN w1.DayNo AND w2.DayNo) OR
-            (w3.Temperature = w1.Temperature AND w3.DayNo = w1.DayNo - 1) OR
-            (w3.Temperature = w2.Temperature AND w3.DayNo = w2.DayNo + 1)
-    )
+			(w3.Temperature = w1.Temperature AND w3.DayNo = w1.DayNo - 1) OR
+			(w3.Temperature = w2.Temperature AND w3.DayNo = w2.DayNo + 1)
+	)
 ORDER BY 
 	w1.DayNo,
-    w2.DayNo;
+	w2.DayNo;
 ```
 | Start | Finish | Size | Temperature |
 | ----- | ------ | ---- | ----------- |
