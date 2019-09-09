@@ -90,7 +90,7 @@ INSERT INTO DailyWeather (`DayNo`, `Temperature`) VALUES
 (14, 60);
 ```
 
-### list of days having at least two days of the same temperature in succession
+### List of days having at least two days of the same temperature in succession
 ```sql
 SELECT 
 	DISTINCT w1.DayNo
@@ -104,15 +104,15 @@ ORDER BY
 	w1.DayNo;
 ```
 
-| | DayNo |
+| DayNo | Temperature |
 | --- | --- |
-| |1|
-| |2|
-| |10|
-| |11|
-| |12|
-| |13|
-| |14|
+|1|50|
+|2|50|
+|10|50|
+|11|50|
+|12|50|
+|13|60|
+|14|60|
 
 
 ### All size-2 regions
@@ -166,3 +166,92 @@ ORDER BY
 |1|2|2|50|
 |10|12|3|50|
 |13|14|2|60|
+
+### Regions of Sequential Numbers: all
+```sql
+CREATE TABLE AvailableDays (DayNo INTEGER NOT NULL);
+INSERT INTO AvailableDays (DayNo) VALUES 
+(1), (2), (3), (6), (7), (8), (9), (11), (13), (14), (15), (17), (18), (20);
+
+SELECT 
+	D1.DayNo AS Start, 
+    MAX(D2.DayNo) AS Finish,
+    MAX(D2.DayNo) - D1.DayNo + 1 AS Size
+FROM 
+	AvailableDays D1,
+    AvailableDays D2 
+WHERE
+	D1.DayNo < D2.DayNo
+    AND (D2.DayNo - D1.DayNo + 1) = 
+		(SELECT COUNT(*) FROM AvailableDays D3 WHERE D3.DayNo BETWEEN D1.DayNo AND D2.DayNo)
+	AND NOT EXISTS (SELECT * FROM AvailableDays D4 WHERE (D1.DayNo - 1 = D4.DayNo))
+GROUP BY D1.DayNo;
+```
+| Start | Finish | Size |
+| ----- | ------ | ---- |
+|1|3|3|
+|6|9|4|
+|13|15|3|
+|17|18|2|
+
+### using RANK()
+```sql
+SELECT 
+	MIN(DayNo) AS Start, 
+    MAX(DayNo) AS Finish, 
+    MAX(DayNo) - MIN(DayNo) + 1 AS Size 
+FROM
+(SELECT 
+	DayNo, 
+    RANK() OVER (ORDER BY DayNo) AS DayRank, # not needed, just for the illustration
+    DayNo - RANK() OVER (ORDER BY DayNo) AS RankDiff
+FROM AvailableDays) AS Ranked
+GROUP BY RankDiff
+HAVING MIN(DayNo) < MAX(DayNo);
+```
+Subquery (Ranked):
+| DayNo | DayRank | RankDiff |
+| ----- | ------- | -------- |
+|1|1|0|
+|2|2|0|
+|3|3|0|
+|6|4|2|
+|7|5|2|
+|8|6|2|
+|9|7|2|
+|11|8|3|
+|13|9|4|
+|14|10|4|
+|15|11|4|
+|17|12|5|
+|18|13|5|
+|20|14|6|
+
+Entire query:
+| Start | Finish | Size |
+| ----- | ------ | ---- |
+|1|3|3|
+|6|9|4|
+|13|15|3|
+|17|18|2|
+
+### Regions of Sequential Numbers: of Maximum Size
+```sql
+SELECT 
+	D1.DayNo, 
+    D2.DayNo,
+    D2.DayNo - D1.DayNo + 1 AS Size
+FROM 
+	AvailableDays D1,
+    AvailableDays D2 
+WHERE
+	D1.DayNo < D2.DayNo
+    AND (D2.DayNo - D1.DayNo + 1) = 
+    	(SELECT COUNT(*) FROM AvailableDays D3 WHERE D3.DayNo BETWEEN D1.DayNo AND D2.DayNo)
+	AND NOT EXISTS (SELECT * FROM AvailableDays D4 WHERE 
+		(D1.DayNo - 1 = D4.DayNo) OR (D2.DayNo + 1 = D4.DayNo))
+ORDER BY Size DESC LIMIT 1;
+```
+| Start | Finish | Size |
+| ----- | ------ | ---- |
+|6|9|4|
