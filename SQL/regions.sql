@@ -69,7 +69,7 @@ WHERE
 ORDER BY 
 	w1.DayNo,
 	w2.DayNo;
-    
+	
 ### Regions of Sequential Numbers: all
 CREATE TABLE AvailableDays (DayNo INTEGER NOT NULL);
 INSERT INTO AvailableDays (DayNo) VALUES 
@@ -90,14 +90,14 @@ INSERT INTO AvailableDays (DayNo) VALUES
 
 SELECT 
 	D1.DayNo AS Start, 
-    MAX(D2.DayNo) AS Finish,
-    MAX(D2.DayNo) - D1.DayNo + 1 AS Size
+	MAX(D2.DayNo) AS Finish,
+	MAX(D2.DayNo) - D1.DayNo + 1 AS Size
 FROM 
 	AvailableDays D1,
-    AvailableDays D2 
+	AvailableDays D2 
 WHERE
 	D1.DayNo < D2.DayNo
-    AND (D2.DayNo - D1.DayNo + 1) = 
+	AND (D2.DayNo - D1.DayNo + 1) = 
 		(SELECT COUNT(*) FROM AvailableDays D3 WHERE D3.DayNo BETWEEN D1.DayNo AND D2.DayNo)
 	AND NOT EXISTS (SELECT * FROM AvailableDays D4 WHERE (D1.DayNo - 1 = D4.DayNo))
 GROUP BY D1.DayNo;
@@ -105,15 +105,15 @@ GROUP BY D1.DayNo;
 ### Regions of Sequential Numbers: of Maximum Size
 SELECT 
 	D1.DayNo, 
-    D2.DayNo,
-    D2.DayNo - D1.DayNo + 1 AS Size
+	D2.DayNo,
+	D2.DayNo - D1.DayNo + 1 AS Size
 FROM 
 	AvailableDays D1,
-    AvailableDays D2 
+	AvailableDays D2 
 WHERE
 	D1.DayNo < D2.DayNo
-    AND (D2.DayNo - D1.DayNo + 1) = 
-    	(SELECT COUNT(*) FROM AvailableDays D3 WHERE D3.DayNo BETWEEN D1.DayNo AND D2.DayNo)
+	AND (D2.DayNo - D1.DayNo + 1) = 
+		(SELECT COUNT(*) FROM AvailableDays D3 WHERE D3.DayNo BETWEEN D1.DayNo AND D2.DayNo)
 	AND NOT EXISTS (SELECT * FROM AvailableDays D4 WHERE 
 		(D1.DayNo - 1 = D4.DayNo) OR (D2.DayNo + 1 = D4.DayNo))
 ORDER BY Size DESC LIMIT 1;
@@ -121,13 +121,13 @@ ORDER BY Size DESC LIMIT 1;
 ### using RANK()
 SELECT 
 	MIN(DayNo) AS Start, 
-    MAX(DayNo) AS Finish, 
-    MAX(DayNo) - MIN(DayNo) + 1 AS Size 
+	MAX(DayNo) AS Finish, 
+	MAX(DayNo) - MIN(DayNo) + 1 AS Size 
 FROM
 (SELECT 
 	DayNo, 
-    RANK() OVER (ORDER BY DayNo) AS DayRank, 
-    DayNo - RANK() OVER (ORDER BY DayNo) AS RankDiff
+	RANK() OVER (ORDER BY DayNo) AS DayRank, 
+	DayNo - RANK() OVER (ORDER BY DayNo) AS RankDiff
 FROM AvailableDays) AS Ranked
 GROUP BY RankDiff
 HAVING MIN(DayNo) < MAX(DayNo);
