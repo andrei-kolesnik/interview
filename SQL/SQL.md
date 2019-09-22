@@ -212,6 +212,7 @@ GROUP BY RankDiff
 HAVING MIN(DayNo) < MAX(DayNo);
 ```
 Subquery (Ranked):
+
 | DayNo | DayRank | RankDiff |
 | ----- | ------- | -------- |
 |1|1|0|
@@ -230,6 +231,7 @@ Subquery (Ranked):
 |20|14|6|
 
 Entire query:
+
 | Start | Finish | Size |
 | ----- | ------ | ---- |
 |1|3|3|
